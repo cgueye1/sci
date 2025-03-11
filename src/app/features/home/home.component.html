@@ -1,0 +1,35 @@
+<main class="max-w-screen-xl mx-auto px-10 py-16">
+  <div class="grid grid-cols-2 gap-96 py-16">
+    <!-- Section gauche : Texte -->
+    <div class="flex flex-col justify-center">
+      <h1 class="text-5xl font-bold ">
+        SCI : <span class="soustitre font-bold">{{ currentWord }}</span>
+      </h1>
+      <p class="para-soustitre font-bold pt-8">en toute simplicité !</p>
+      
+      <p class="font-poppins font-normal text-[18px] tracking-[0%] w-[498px] h-[189px]  top-[374px] left-[81px] mb-10"> 
+        Vous avez des interrogations sur l’achat de votre futur bien immobilier, la gestion d’une copropriété 
+        ou encore la VEFA (Vente en l'État Futur d'Achèvement) ? SCI
+         expert en immobilier, vous accompagne à chaque étape. Consultez notre Guide du crédit et découvrez toutes les informations essentielles pour concrétiser 
+        votre projet en toute sérénité.
+      </p>
+
+  
+      <button class="mybutton">En savoir plus</button>
+    </div>
+
+    <!-- Section droite : Cartes dynamiques -->
+    <div class="relative grid grid-cols-2 gap-4 carte-principale">
+      <div
+        *ngFor="let card of cards; let i = index"
+        [ngClass]="positions[i]"
+        class="absolute  bg-card-black rounded-[20px] flex flex-col items-center justify-center text-white transition-transform duration-700 card-boucle"
+      >
+        <div class="mb-4">
+          <img [src]="card.image" [alt]="card.label" class="img-card" />
+        </div>
+        <span>{{ card.label }}</span>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,49 @@
+<div class="container mx-auto  mb-8 w-full">
+    <div class="flex flex-col lg:flex-row gap-8 rounded-xl overflow-hidden carte-interieur">
+      <!-- Left Section: Text content -->
+      <div class="lg:w-1/2 p-8 flex flex-col justify-between mycarte-left" >
+        <div>
+          <h3 class="font-poppins  mb-4 about-title">À propos </h3>
+          
+          <h1 class=" font-poppins font-normal leading-[100%] tracking-[0%]  w-[560.27px] h-[144px] top-[903px] left-[58px] mb-10 h1-about">
+            Découvrez SCI : Votre  <br>partenaire de confiance dans l'immobilier moderne
+          </h1>
+          
+          <p class="mb-6 text-gray-700 para-titre font-poppins" >
+            Fondé avec l'intention de transformer le secteur de l'immobilier, SCI s'engage à offrir des solutions innovantes et adaptées aux besoins de ses clients.
+          </p>
+          
+          <p class="mb-6 text-gray-700 para-titre font-poppins">
+            Nos valeurs reposent sur la transparence, l'intégrité et l'excellence, garantissant une expérience client inégalée. Notre mission est de faciliter chaque étape de votre projet immobilier, qu'il s'agisse de vente, de location ou de gestion.
+          </p>
+          
+          <p class="text-gray-700 para-titre font-poppins">
+            Nous facilitons la gestion et l'interaction entre les différents acteurs du marché acheteurs, locataires, copropriétaires et prestataires en leur offrant des outils performants et intuitifs.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Right Section: Image and Stats -->
+      <div class="lg:w-1/2 flex flex-col gap-6">
+        <!-- Modern house image -->
+        <div class="h-64 md:h-96 lg:h-3/4 w-full mycarte-right">
+          <img 
+            src="/assets/images/main.jpg" 
+            alt="Maison moderne avec design contemporain" 
+            class="w-full h-full object-cover rounded-[25px]"
+          />
+        </div>
+        
+        <!-- Stats section -->
+        <div class="bg-white py-6 px-4 lg:h-1/4 mycarte-bas">
+          <div class="grid grid-cols-2 gap-4 h-full">
+            <!-- Stats items -->
+            <div *ngFor="let stat of stats" class="flex flex-col justify-center items-center text-center  mylow-carte">
+              <p class="text-4xl  font-bold  font-montSerrat myvalue ">{{ stat.value }}</p>
+              <p class="text-sm  ">{{ stat.label }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

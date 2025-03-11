@@ -1,0 +1,27 @@
+/* Ce fichier contient des styles personnalisés qui complètent Tailwind CSS */
+/* Il est généralement léger car la plupart des styles sont gérés via Tailwind */
+
+.logo-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animation supplémentaire pour les logos lors du survol */
+  .logo-item img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .logo-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  
+  /* Style pour les dots indicateurs actifs avec transition */
+  .dot-indicator {
+    transition: background-color 0.3s ease;
+  }

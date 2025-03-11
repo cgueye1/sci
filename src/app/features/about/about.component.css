@@ -1,0 +1,93 @@
+.container {
+  /* background-color: #fff; */
+  background-color:#F6F8F7;
+  /* margin-bottom: 120px; */
+  width: 1201px;
+  height: 820px;
+  top: 808px;
+  left: 32px;
+
+}
+.carte-interieur {
+background-color: #fff;
+}
+.about-title {
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+color:#574D48;
+font: bold;
+
+}
+.h1-about {
+  
+  font-size: 32px;
+  color: #000;
+}
+.mycarte-left {
+width: 586px;
+height: 820px;
+top: 808px;
+left: 32px;
+border-radius: 25px;
+background-color:#F6F8F7;
+/* border: 12px; */
+
+}
+.para-titre {
+  
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.mycarte-right{
+    width: 587px;
+    height: 438px;
+    top: 808px;
+    left: 646.58px;
+    /* border: 12px ; */
+
+}
+.mycarte-bas {
+/* margin: 10px; */
+width: 586px;
+height: 355px;
+top: 1273px;
+left: 646.58px;
+border-radius: 25px;
+background-color:#F8F9FA;
+
+
+}
+.mylow-carte{
+width: 236px;
+height: 110px;
+top: 1327px;
+left: 681px;
+border-radius: 10px;
+background-color: #FFFFFF;
+
+
+}
+.myvalue {
+  width: 28px;
+height: 59px;
+top: 7px;
+left: 99.58px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color:#252323;
+  ;
+
+}
+@media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }

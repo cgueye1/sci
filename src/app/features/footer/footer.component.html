@@ -1,0 +1,90 @@
+<footer class="text-white py-12 container-footer">
+  <div class="container mx-auto px-4">
+
+    <!-- Wrapper pour aligner à gauche et à droite -->
+    <div class="flex flex-col lg:flex-row justify-between items-start mb-10">
+      
+      <!-- Partie S'inscrire (à gauche) -->
+      <div class="order-2 lg:order-1">
+        <h2 class="text-2xl font-bold mb-2">Newsletter SCI</h2>
+        <p class="mb-4">
+          Restez informé des dernières tendances immobilières, des offres exclusives et des 
+          conseils pratiques en vous abonnant à notre newsletter.
+        </p>
+      </div>
+
+      <!-- Partie Input et Bouton (à droite) -->
+      <div class="order-1 lg:order-2 flex flex-col sm:flex-row gap-2 mb-2">
+        <input 
+          type="email" 
+          [formControl]="emailControl"
+          placeholder="Entrer votre email" 
+          class="w-full sm:w-80 px-4 py-3 rounded-md text-gray-900"
+        />
+        <button 
+          (click)="onSubmit()" 
+          class="px-6 py-3 bg-gray-700 hover:bg-gray-600 transition rounded-md btn-footer"
+        >
+          S'inscrire
+        </button>
+      </div>
+    </div>
+    
+    <hr class="border-gray-700 my-6">
+    
+    <!-- Colonnes de liens -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-8 gap-x-12">
+      <div class="lg:col-span-1">
+        <h2 class="text-2xl font-bold mb-6">SCI</h2>
+        <div>
+          <h3 class="font-semibold mb-2">LIEU</h3>
+          <p>Anywhere, Dakar, Immeuble 8</p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-1">
+        <h3 class="font-semibold mb-4">INFOS UTILES</h3>
+        <ul class="space-y-2">
+          @for (link of infoLinks; track link.label) {
+            <li><a [routerLink]="link.path" class="hover:underline">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="lg:col-span-1">
+        <h3 class="font-semibold mb-4">SERVICES</h3>
+        <ul class="space-y-2">
+          @for (link of serviceLinks; track link.label) {
+            <li><a [routerLink]="link.path" class="hover:underline">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="lg:col-span-1">
+        <h3 class="font-semibold mb-4">MENU</h3>
+        <ul class="space-y-2">
+          @for (link of menuLinks; track link.label) {
+            <li><a [routerLink]="link.path" class="hover:underline">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="lg:col-span-1">
+        <h3 class="font-semibold mb-4">MEDIAS SOCIAUX</h3>
+        <ul class="space-y-2">
+          @for (link of socialLinks; track link.label) {
+            <li><a [href]="link.path" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-gray-700 my-8">
+
+    <!-- Copyright -->
+    <div class="text-center">
+      <p>© {{ currentYear }} SCI. Tous droits réservés.</p>
+    </div>
+
+  </div>
+</footer>

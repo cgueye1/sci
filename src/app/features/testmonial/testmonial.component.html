@@ -1,0 +1,45 @@
+<section class="testimonials-section py-16 px-4 mx-auto">
+    <div class="container mx-auto" >
+      <!-- Title -->
+      <h2 class="section-title text-center mb-6">Témoignages</h2>
+      
+      <!-- Description -->
+      <div class="mx-auto text-center mb-16">
+        <p class="section-description">
+          Découvrez ce que nos clients disent de leur expérience avec SCI. Leurs témoignages mettent en lumière notre engagement envers la qualité, le professionnalisme et la satisfaction clients. Laissez-vous inspirer par leurs histoires et rejoignez la communauté SCI.
+        </p>
+      </div>
+      
+      <!-- Testimonials Slider -->
+      <div class="testimonials-slider-container flex flex-wrap justify-center gap-4 ">
+        <div class="testimonials-slider flex gap-6 transition-all duration-500 mx-auto ">
+          <div *ngFor="let testimonial of visibleTestimonials" class="testimonial-card ">
+            <div class="avatar-container mx-auto">
+              <div class="avatar-circle items-center">
+                <img [src]="testimonial.image" [alt]="testimonial.name" class="rounded-full w-full h-full object-cover">
+              </div>
+            </div>
+            
+            <p class="testimonial-text">{{ testimonial.text }}</p>
+            
+            <div class="testimonial-author">
+              <h4 class="author-name">{{ testimonial.name }}</h4>
+              <p class="author-position">{{ testimonial.position }} &#64; {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation dots -->
+        <div class="navigation-dots flex justify-center mt-12 gap-2">
+          <!-- <button 
+            *ngFor="let testimonial of testimonials; let i = index" 
+            [class.active]="i === currentIndex"
+            [disabled]="i > testimonials.length - displayCount"
+            (click)="goToSlide(i)"
+            class="nav-dot"
+            [attr.aria-label]="'Go to testimonial ' + (i + 1)"
+          ></button> -->
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,65 @@
+/* Styles spécifiques au composant */
+.container-contact {
+  display: flex;
+  width: 100%;
+  height: 713px;
+  overflow: hidden;
+}
+
+.img-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.img-contact {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.form-contact {
+  width: 100%;
+  height: 713px;
+  background-color: #252323;
+  color: white;
+  padding: 2rem;
+  margin: 0;
+  border: none;
+}
+
+.submit-contact {
+  background-color: #574D48;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container-contact {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .img-container {
+    height: 350px;
+  }
+  
+  .form-contact {
+    height: auto;
+    min-height: 600px;
+  }
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

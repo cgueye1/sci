@@ -1,0 +1,16 @@
+
+.container-footer{
+    background-color: #252323;
+
+}
+
+/* Vous pouvez ajouter des styles personnalisés ici */
+
+  
+  .container {
+    max-width: 1280px;
+  }
+  .btn-footer {
+    background-color:#574D48;
+    border-top: 1px 
+  }

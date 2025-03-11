@@ -1,0 +1,75 @@
+<div class="flex flex-col md:flex-row container-contact">
+  <!-- Image section -->
+  <div class="w-full md:w-1/2 relative overflow-hidden img-container">
+    <img
+       src="assets/images/KEY.jpg"
+       alt="Remise de clés"
+       class="w-full h-full object-cover img-contact"
+    />
+  </div>
+
+  <!-- Form section -->
+  <div class="w-full md:w-1/2 flex flex-col justify-center form-contact">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center font-poppins">Formulaire de contact</h2>
+       
+    <form class="space-y-6">
+      <!-- Nom field -->
+      <div class="space-y-2">
+        <label for="nom" class="block font-medium font-poppins">Nom</label>
+        <input
+           type="text"
+           id="nom"
+           formControlName="nom"
+           class="w-full p-3 bg-white rounded-md"
+         />
+      </div>
+       
+      <!-- Email field -->
+      <div class="space-y-2">
+        <label for="email" class="block font-medium font-poppins">Email</label>
+        <input
+           type="email"
+           id="email"
+           formControlName="email"
+           class="w-full p-3 bg-white rounded-md"
+         />
+      </div>
+       
+      <!-- Message field -->
+      <div class="space-y-2">
+        <label for="message" class="block font-medium font-poppins">Votre message</label>
+        <textarea
+           id="message"
+           formControlName="message"
+           rows="6"
+           placeholder="Écrivez quelque chose"
+           class="w-full p-3 rounded-md resize-none"
+        ></textarea>
+      </div>
+       
+      <!-- Submit button -->
+      <button
+         type="submit"
+         class="w-full md:w-auto px-8 py-3 hover:bg-gray-600 transition-colors duration-300 rounded-md font-medium font-poppins submit-contact"
+        [disabled]="loading"
+      >
+        <span *ngIf="!loading">Envoyer</span>
+        <span *ngIf="loading" class="flex items-center justify-center">
+          <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Envoi en cours...
+        </span>
+      </button>
+       
+      <!-- Success/error message -->
+      <div *ngIf="submitted && success" class="p-3 bg-green-600 text-white rounded-md">
+        Votre message a été envoyé avec succès.
+      </div>
+      <div *ngIf="submitted && error" class="p-3 bg-red-600 text-white rounded-md">
+        Une erreur est survenue. Veuillez réessayer.
+      </div>
+    </form>
+  </div>
+</div>

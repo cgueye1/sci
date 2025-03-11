@@ -1,0 +1,28 @@
+<section class="services-section mx-auto">
+    <h1 class="text-center font-bold font- poppins titre"> Découvrez nos services <br>
+        immobiliers</h1>
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Left column - Image -->
+        <div class="team-image-container rounded-lg overflow-hidden carte-image">
+          <img 
+            src="assets/images/team.jpeg" 
+            alt="Équipe professionnelle en réunion" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+  
+        <!-- Right column - Services -->
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-12">
+          <!-- Service items dynamically generated -->
+          <div *ngFor="let service of services" class="service-item flex flex-col items-center text-center">
+            <div class="icon-container   mb-4">
+              <img [src]="service.icon" alt="Icône service" class="w-16 h-16 text-white" >
+            </div>
+            <h3 class="service-title mb-4">{{ service.title }}</h3>
+            <p class="service-description">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

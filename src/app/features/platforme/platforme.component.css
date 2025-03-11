@@ -1,0 +1,68 @@
+.section-plateforme {
+    background-color:#F6F8F7;
+    height: 764px;
+    top: 3516px;
+}
+  
+  /* Style pour les étoiles d'évaluation - fallback si Tailwind n'est pas suffisant */
+  .star-rating .star {
+    display: inline-block;
+  }
+/* .titre-plateforme {
+    padding-top: 50px;
+    font-weight: 600px;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    color:#252323;
+    }
+.subtitle {
+    padding-top: 15px;
+    font-family: Instrument Sans;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+
+} */
+  /* Amélioration de l'accessibilité pour le focus */
+  button:focus, a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+/* #textenBas {
+    padding-top: 20px;
+    background-color: red;
+} */
+.card-plateforme {
+    width: 284px;
+    height: 372px;
+    gap: 10px;
+    /* top: 309px; */
+    /* left: 947px; */
+    border-radius: 10px;
+  
+
+}
+.card-one{
+    background-color:#FBFBFB;
+    
+}
+/* .btn-button {
+    background-color:#252323;
+    color: #FBFBFB;
+    width: 116px;
+    height:45px;
+    top: 243px;
+    left: 88px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+
+} */

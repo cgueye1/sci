@@ -1,0 +1,234 @@
+/* Position initiale des cartes */
+.top-left {
+  top: 54px;
+  left: 0;
+}
+
+.top-right {
+  left: 231px;
+  right: 0;
+}
+
+.bottom-left {
+  top: 274px;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;  
+  top: 227.58px;
+  left: 231.44px;
+
+}
+.card-boucle{
+  width: 211px;
+  height: 200px;
+}
+
+/* Transition fluide lors du changement de position */
+/* .carte-principale div {
+  transition: transform 0.7s ease-in-out, top 0.7s ease-in-out, left 0.7s ease-in-out;
+} */
+.img-card {
+width: 77px;
+height: 77px;
+top: 37px;
+left: 52px;
+}
+
+.titre-left {
+width: 488px;
+height: 144px;
+top: 213px;
+left: 81px;
+padding-top: 10px;
+
+
+}
+
+
+/* Gradient animé */
+/* .soustitre {
+  font-family: Poppins;
+font-weight: 700;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF );
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+  */
+ /* CSS */
+.soustitre {
+/* font-family: Poppins; */
+/* font-weight: 900; */
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF );
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+
+  display: inline-block;
+  position: relative;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.word-exit {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.word-enter {
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.para-soustitre {
+  width: 488px;
+  height: 144px;
+  
+/* font-weight: 700; */
+/* margin-top: 90px; */
+/* padding: 10px; */
+font-size: 48px;
+/* line-height: 100%; */
+/* letter-spacing: 0%; */
+color:#000000;
+
+
+}
+
+/* Animation fade-up
+.fade-up {
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+.mon-para{
+/* width: 498px;
+height: 189px; */
+top: 400px;
+left: 81px;
+/* font-family: Poppins; */
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000000;
+
+
+
+} 
+
+
+/* .soustitre {
+width: 488px;
+height: 144px;
+top: 213px;
+left: 81px;
+font-family: Poppins;
+font-weight: 700;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+background: linear-gradient(121.11deg, #574D48 42.03%, #FFFFFF 78.8%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+
+} */
+.mybutton{
+width:170px;
+background-color:#252323;
+color: white;
+height: 45px;
+top: 594px;
+left: 81px;
+border-radius: 15px;
+border-width: 1px;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0%;
+}
+
+.card-prestataires {
+  top: 195px;
+  left: 198px;
+  text-decoration: white;
+  background-color:#252323;
+}
+.prestataire-img {
+width: 77px;
+height: 77px;
+top: 34px;
+left: 52px;
+
+}
+
+.card-copropriete {
+  right: 0;
+  left: 198px;
+
+} 
+.copropriété-img{
+width: 77px;
+height: 77px;
+top: 37px;
+left: 52px;
+
+}
+
+.card-vefa {
+  top: 235px;
+  border-radius: 20px;
+
+}
+.vefa-img {
+width: 77px;
+height: 77px;
+top: 34px;
+left: 52px;
+
+}
+
+.card-location {
+  top: 47px;
+  border-radius: 20px;
+}
+.location-img {
+width: 77px;
+height: 77px;
+top: 20px;
+left: 52px;
+
+}
+
+.bg-card-black {
+  background-color:#252323;
+
+}

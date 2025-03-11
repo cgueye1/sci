@@ -1,0 +1,45 @@
+<!-- faq.component.html -->
+<div class="container mx-auto px-4 py-12 max-w-screen-xl flex flex-col lg:flex-row justify-between items-start container-faq w-screen  bg-cover">
+  <div class="order-1 lg:order-2">
+    <h1 class="text-5xl font-bold text-gray-900 mb-6">FAQ</h1>
+    
+    <p class="text-lg text-gray-700 mb-10">
+      Vous avez des questions sur nos services immobiliers ? Consultez
+      notre FAQ pour trouver rapidement les réponses à vos
+      interrogations.
+    </p>
+  </div> 
+    <div class="space-y-4 order-2 lg:order1 ">
+      @for (item of faqItems; track item.question) {
+        <div class="border  rounded-lg overflow-hidden">
+          <button
+            (click)="toggleItem(item)"
+            class="w-full flex items-center justify-between p-4 text-left focus:outline-none"
+          >
+            <span class="text-lg font-medium">{{ item.question }}</span>
+            <svg
+              class="w-6 h-6 transition-transform duration-200"
+              [ngClass]="{'rotate-180': item.isOpen}"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          
+          @if (item.isOpen) {
+            <div class="p-4 border-t border-gray-200 text-gray-700">
+              <p>{{ item.answer }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
