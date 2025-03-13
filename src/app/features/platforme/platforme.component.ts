@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 /**
  * Interface représentant un service immobilier
@@ -8,8 +9,9 @@ interface plateformesService {
   id: number;
   title: string;
   description: string;
-  imageUrl: string;
-  altText: string;
+  image: string;
+  priority:boolean;
+  altText:string;
 }
 
 /**
@@ -18,7 +20,7 @@ interface plateformesService {
 interface MobileApp {
   platform: string;
   url: string;
-  imageUrl: string;
+  image:string;
 }
 
 /**
@@ -33,7 +35,7 @@ interface MobileApp {
 @Component({
   selector: 'app-platforme',
   standalone: true,
-  imports: [CommonModule],
+  imports:[CommonModule,NgOptimizedImage],
   templateUrl: './platforme.component.html',
   styleUrls: ['./platforme.component.css']
 })
@@ -46,8 +48,7 @@ export class PlatformeComponent {
   /**
    * Description détaillée des services offerts
    */
-  pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plateformes dédiées. Achat en VEFA, location, gestion de copropriété ou services de maintenance, accédez facilement à l\'offre qui vous correspond.';
-  
+pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plateformes dédiées. Achat en VEFA, location, gestion de copropriété ou services de maintenance,accédez facilement à l\'offre qui vous correspond.';  
   /**
    * Note moyenne des utilisateurs (sur 5)
    */
@@ -65,12 +66,12 @@ export class PlatformeComponent {
     {
       platform: 'iOS',
       url: 'https://apps.apple.com/',
-      imageUrl: 'assets/images/apple.png'
+      image: 'assets/images/apple.png'
     },
     {
       platform: 'Android',
       url: 'https://play.google.com/',
-      imageUrl: 'assets/images/googleplay.png'
+      image: 'assets/images/googleplay.png'
     }
   ];
   
@@ -82,29 +83,33 @@ export class PlatformeComponent {
       id: 1,
       title: 'Achat en VEFA',
       description: 'Achetez des biens immobiliers sur plan avec nos services dédiés',
-      imageUrl: 'assets/images/vefa.jpeg',
-      altText: 'Signature d\'un contrat VEFA avec plan architectural'
+      image: 'assets/images/vefa.jpeg',
+      altText: 'Signature d\'un contrat VEFA avec plan architectural',
+      priority:true
     },
     {
       id: 2,
       title: 'Location',
       description: 'Trouvez votre location idéale parmi notre sélection de biens',
-      imageUrl: 'assets/images/room.jpg',
-      altText: 'Intérieur d\'un appartement moderne à louer'
+      image: 'assets/images/room.jpg',
+      altText: 'Intérieur d\'un appartement moderne à louer',
+      priority:false
     },
     {
       id: 3,
       title: 'Platefome de VEFA ',
       description: 'Services professionnels de réparation et maintenance pour votre bien',
-      imageUrl: 'assets/images/menuisier.jpg',
-      altText: 'Travailleur effectuant des réparations de maintenance'
+       image: 'assets/images/menuisier.jpg',
+      altText: 'Travailleur effectuant des réparations de maintenance',
+      priority:true
     },
     {
       id: 4,
       title: 'Copropriété',
       description: 'Solutions de gestion pour les copropriétés et résidences',
-      imageUrl: 'assets/images/IMMO.jpeg',
-      altText: 'Immeuble résidentiel moderne en copropriété'
+     image: 'assets/images/IMMO.jpeg',
+      altText: 'Immeuble résidentiel moderne en copropriété',
+      priority:true
     }
   ];
   

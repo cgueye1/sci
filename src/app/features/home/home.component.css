@@ -1,3 +1,21 @@
+
+/* Modification pour supprimer l'espacement à gauche */
+main {
+  padding-left: 100px; /* Supprime le padding gauche */
+  margin-left: 100px; /* Supprime la marge gauche */
+}
+
+/* Ajustement pour la première div dans le main */
+main > div {
+  padding-left: 70; /* Supprime le padding gauche */
+  margin-left: 70; /* Supprime la marge gauche */
+}
+
+/* Pour s'assurer que le contenu texte s'aligne complètement à gauche */
+/* .flex.flex-col.justify-center.order-2.lg\:order-1 {
+  padding-left: 0;
+  margin-left: 0;
+} */
 /* Position initiale des cartes */
 .top-left {
   top: 54px;
@@ -22,9 +40,13 @@
   left: 231.44px;
 
 }
+.card-container {
+  margin-left: 190px;
+}
 .card-boucle{
   width: 211px;
   height: 200px;
+  padding: auto;
 }
 
 /* Transition fluide lors du changement de position */
@@ -39,11 +61,12 @@ left: 52px;
 }
 
 .titre-left {
-width: 488px;
+width: 100%;
 height: 144px;
 top: 213px;
 left: 81px;
 padding-top: 10px;
+background-color: red;
 
 
 }
@@ -62,7 +85,7 @@ background-clip: text;
 color: transparent;
 }
   */
- /* CSS */
+ 
 .soustitre {
 /* font-family: Poppins; */
 /* font-weight: 900; */
@@ -73,10 +96,10 @@ background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF );
 -webkit-background-clip: text;
 background-clip: text;
 color: transparent;
-
-  display: inline-block;
-  position: relative;
-  transition: transform 0.5s, opacity 0.5s;
+ display: inline-block;
+position: relative;
+transition: transform 0.5s, opacity 0.5s;
+margin: 0;
 }
 
 .word-exit {
@@ -165,6 +188,7 @@ color: transparent;
 width:170px;
 background-color:#252323;
 color: white;
+margin-top: -40px;
 height: 45px;
 top: 594px;
 left: 81px;

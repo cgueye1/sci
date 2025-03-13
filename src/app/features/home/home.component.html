@@ -1,29 +1,29 @@
-<main class="max-w-screen-xl mx-auto px-10 py-16">
-  <div class="grid grid-cols-2 gap-96 py-16">
+<!-- SCI Landing Page - Main Home Section -->
+<main class="max-w-screen-xl mx-0 sm:mx-0 md:ml-0 lg:ml-0 px-0 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12 lg:py-16">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-96 py-6 md:py-10 lg:py-16">
     <!-- Section gauche : Texte -->
-    <div class="flex flex-col justify-center">
-      <h1 class="text-5xl font-bold ">
+    <div class="flex flex-col justify-center order-2 lg:order-1">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
         SCI : <span class="soustitre font-bold">{{ currentWord }}</span>
       </h1>
-      <p class="para-soustitre font-bold pt-8">en toute simplicité !</p>
+      <p class="para-soustitre font-bold pt-2 md:pt-4 text-3xl md:text-4xl lg:text-5xl w-full lg:w-[488px]">en toute simplicité !</p>
       
-      <p class="font-poppins font-normal text-[18px] tracking-[0%] w-[498px] h-[189px]  top-[374px] left-[81px] mb-10"> 
-        Vous avez des interrogations sur l’achat de votre futur bien immobilier, la gestion d’une copropriété 
+      <p class="font-poppins font-normal text-base md:text-lg lg:text-[18px] tracking-[0%] w-full lg:w-[498px] h-auto lg:h-[189px] mb-6 lg:mb-10">
+        Vous avez des interrogations sur l'achat de votre futur bien immobilier, la gestion d'une copropriété
         ou encore la VEFA (Vente en l'État Futur d'Achèvement) ? SCI
-         expert en immobilier, vous accompagne à chaque étape. Consultez notre Guide du crédit et découvrez toutes les informations essentielles pour concrétiser 
+        expert en immobilier, vous accompagne à chaque étape. Consultez notre Guide du crédit et découvrez toutes les informations essentielles pour concrétiser
         votre projet en toute sérénité.
       </p>
-
-  
-      <button class="mybutton">En savoir plus</button>
+      
+      <button class="mybutton mt-2 md:mt-0">En savoir plus</button>
     </div>
-
+    
     <!-- Section droite : Cartes dynamiques -->
-    <div class="relative grid grid-cols-2 gap-4 carte-principale">
+    <div class="relative grid grid-cols-2 gap-4 carte-principale h-[450px] md:h-[500px] order-1 lg:order-2 mx-auto lg:mx-0 card-container">
       <div
         *ngFor="let card of cards; let i = index"
         [ngClass]="positions[i]"
-        class="absolute  bg-card-black rounded-[20px] flex flex-col items-center justify-center text-white transition-transform duration-700 card-boucle"
+        class="absolute bg-card-black rounded-[20px] flex flex-col items-center justify-center text-white transition-transform duration-700 card-boucle"
       >
         <div class="mb-4">
           <img [src]="card.image" [alt]="card.label" class="img-card" />

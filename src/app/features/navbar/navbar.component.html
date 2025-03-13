@@ -1,116 +1,131 @@
-<!-- <div class="bg-white min-h-screen">
-  Navigation -->
-  <!-- <nav class="flex justify-between items-center px-10 py-8 border-1 bg-white ">
-    <div class="text-2xl font-bold logo">SCI</div>
-    <div class="flex items-center space-x-6 font-bold">
-      <a href="#" class="text-gray-600 " >Accueil</a>
-      <a href="#" class="text-gray-600">À propos</a>
-      <a href="#" class="text-gray-600">Nos services</a>
-      <a href="#" class=" px-4 py-2 rounded-[10px] border-2 mycontact">Nous Contacter</a>
-      <a href="#" class="px-4 py-2 rounded-[10px] plateforme">Visiter nos plateformes</a>
-    </div> -->
-  <!-- </nav> -->
-<!-- </div> -->
-<nav class="bg-white fixed left-0 w-full  py-4 transition-all duration-300 shadow-lg z-40">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
-      <!-- Logo -->
-      <div class="flex items-center logo">
-        <a routerLink="/accueil" class="text-2xl font-bold text-gray-900">SCI</a>
+<nav class= "bg-white fixed left-0 w-full py-3 transition-all duration-300  z-40">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo (à gauche) -->
+      <div class="flex-shrink-0 flex items-center logo">
+        <a routerLink="/accueil" class="logo">SCI</a>
       </div>
-
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex md:items-center md:space-x-6">
+      
+      <!-- Navigation desktop (centrée) -->
+      <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
+        <div class="flex space-x-10 items-center nav-links">
+          <ng-container *ngFor="let link of navLinks">
+            <a
+              [routerLink]="link.path"
+              routerLinkActive="active-link"
+              class="titre-nav hover:text-gray-800 transition-colors duration-200"
+            >
+              {{ link.label }}
+            </a>
+          </ng-container>
+        </div>
+      </div>
+      
+      <!-- Boutons à droite (desktop) -->
+      <div class="hidden lg:flex items-center space-x-4 action-buttons">
+        <a
+          routerLink="/contact"
+          class="contact-btn px-4 py-2 rounded-[10px] border-2 transition-colors duration-200"
+        >
+          Nous Contacter
+        </a>
+        <a
+          routerLink="/plateformes"
+          class="platform-btn px-4 py-2 rounded-[10px] transition-colors duration-200"
+        >
+          Visiter nos plateformes
+        </a>
+      </div>
+      
+      <!-- Affichage tablette - Version simplifiée -->
+      <div class="hidden md:flex lg:hidden items-center space-x-6">
         <ng-container *ngFor="let link of navLinks">
-          <a 
-            [routerLink]="link.path" 
-            routerLinkActive="text-black font-semibold" 
-            class="text-gray-600 hover:text-black transition-colors"
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="active-link"
+            class="titre-nav hover:text-gray-800 transition-colors duration-200"
           >
             {{ link.label }}
           </a>
         </ng-container>
         
-        <div class="flex space-x-4">
-          <a 
-            routerLink="/contact" 
-             class=" px-4 py-2 rounded-[10px] border-2 mycontact"
-          >
-            Nous Contacter
-          </a>
-          <a 
-            routerLink="/plateformes" 
-            class=" text-black px-4 py-2 rounded-[10px]  transition-colors plateforme"
-          >
-            Visiter nos plateformes
-          </a>
-        </div>
-      </div>
-
-      <!-- Mobile Menu Toggle -->
-      <div class="md:hidden flex items-center">
-        <button 
-          (click)="toggleMobileMenu()" 
-          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+        <!-- Bouton Contact version tablette -->
+        <a
+          routerLink="/contact"
+          class="contact-btn-tablet px-3 py-1 rounded-md border text-sm"
         >
-          <span class="sr-only">Open main menu</span>
-          <svg 
-            *ngIf="!isMobileMenuOpen" 
-            class="h-6 w-6" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
+          Contact
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Toggle (toujours affiché en mobile) -->
+      <div class="md:hidden flex items-center">
+        <button
+          (click)="toggleMobileMenu()"
+          class="mobile-toggle inline-flex items-center justify-center p-2 rounded-md hover:text-gray-900 hover:bg-gray-100"
+          aria-expanded="false"
+          [attr.aria-expanded]="isMobileMenuOpen"
+        >
+          <span class="sr-only">Ouvrir le menu</span>
+          <svg
+            *ngIf="!isMobileMenuOpen"
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg 
-            *ngIf="isMobileMenuOpen" 
-            class="h-6 w-6" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
+          <svg
+            *ngIf="isMobileMenuOpen"
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
-    <div 
-      *ngIf="isMobileMenuOpen" 
-      class="md:hidden absolute inset-x-0 top-16 bg-white shadow-lg"
-    >
-      <div class="pt-2 pb-3 space-y-1">
-        <ng-container *ngFor="let link of navLinks">
-          <a 
-            [routerLink]="link.path" 
-            (click)="closeMobileMenu()"
-            routerLinkActive="bg-gray-100 text-black"
-            class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-50"
-          >
-            {{ link.label }}
-          </a>
-        </ng-container>
-        
-        <div class="px-3 py-2 space-y-2">
-          <a 
-            routerLink="/contact"
-            (click)="closeMobileMenu()"
-            class="block bg-black text-white px-4 py-2 rounded text-center"
-          >
-            Nous Contacter
-          </a>
-          <a 
-            routerLink="/plateformes"
-            (click)="closeMobileMenu()"
-            class="block bg-gray-100 text-black px-4 py-2 rounded text-center"
-          >
-            Visiter nos plateformes
-          </a>
-        </div>
+  </div>
+  
+  <!-- Mobile Menu - correctement affiché uniquement en version mobile -->
+  <div
+    class="mobile-menu w-full md:hidden"
+    [ngClass]="{'hidden': !isMobileMenuOpen}"
+    [@slideInOut]="isMobileMenuOpen ? 'in' : 'out'"
+  >
+    <div class="px-2 pt-2 pb-3 space-y-1 border-t">
+      <ng-container *ngFor="let link of navLinks">
+        <a
+          [routerLink]="link.path"
+          (click)="closeMobileMenu()"
+          routerLinkActive="bg-gray-100 text-black font-medium"
+          class="mobile-link block px-3 py-2 text-base font-medium rounded-md"
+        >
+          {{ link.label }}
+        </a>
+      </ng-container>
+      <div class="grid grid-cols-2 gap-2 mt-4 px-3">
+        <a
+          routerLink="/contact"
+          (click)="closeMobileMenu()"
+          class="mobile-contact-btn text-center py-2 rounded-md"
+        >
+          Nous Contacter
+        </a>
+        <a
+          routerLink="/plateformes"
+          (click)="closeMobileMenu()"
+          class="mobile-platform-btn text-center py-2 rounded-md"
+        >
+          Nos plateformes
+        </a>
       </div>
     </div>
   </div>

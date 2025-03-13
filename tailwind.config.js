@@ -24,6 +24,9 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
     }
   },
   animation: {

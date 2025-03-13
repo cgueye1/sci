@@ -1,93 +1,181 @@
-.container {
-  /* background-color: #fff; */
-  background-color:#F6F8F7;
-  /* margin-bottom: 120px; */
-  width: 1201px;
-  height: 820px;
-  top: 808px;
-  left: 32px;
+/* CSS mis à jour avec largeurs augmentées */
+.about-container {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+  font-family: 'Poppins';
+  padding-left: 100px;
+  padding-right: 100px;
+}
 
-}
-.carte-interieur {
-background-color: #fff;
-}
-.about-title {
-font-weight: 600;
-font-size: 24px;
-line-height: 100%;
-letter-spacing: 0%;
-color:#574D48;
-font: bold;
-
-}
-.h1-about {
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1700px; /* Augmenté pour donner plus d'espace */
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
   
-  font-size: 32px;
-  color: #000;
 }
-.mycarte-left {
-width: 586px;
-height: 820px;
-top: 808px;
-left: 32px;
-border-radius: 25px;
-background-color:#F6F8F7;
-/* border: 12px; */
 
+/* Style de la colonne gauche */
+
+.about-left {
+  width: 45%; /* Légèrement réduit pour donner plus d'espace à droite */
+  padding: 50px 40px;
+  background-color: #F6F8F7;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column; /* Alignement vertical */
+  justify-content: flex-start; /* Aligne les éléments en haut */
 }
-.para-titre {
-  
-font-weight: 400;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-
-}
-.mycarte-right{
-    width: 587px;
-    height: 438px;
-    top: 808px;
-    left: 646.58px;
-    /* border: 12px ; */
-
-}
-.mycarte-bas {
-/* margin: 10px; */
-width: 586px;
-height: 355px;
-top: 1273px;
-left: 646.58px;
-border-radius: 25px;
-background-color:#F8F9FA;
 
 
-}
-.mylow-carte{
-width: 236px;
-height: 110px;
-top: 1327px;
-left: 681px;
-border-radius: 10px;
-background-color: #FFFFFF;
-
-
-}
-.myvalue {
-  width: 28px;
-height: 59px;
-top: 7px;
-left: 99.58px;
-  font-weight: 500;
-  font-size: 48px;
+.about-left h3{
+  font-family: 'Poppins';
+  padding: 10px;
+  /* margin-top: 60px;  */
+  font-weight: 600;
+  font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
-  color:#252323;
-  ;
+  font-size: clamp(1.5rem, 2vw, 2.5rem); 
+  color: #574D48;
+  
+}
+
+
+
+.about-left h1 {
+  font-family: 'Poppins';
+  padding: 20px;
+  font-size: 32px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  margin:0 ;
+  padding: 0;
+  /* padding-bottom: 30px; */
+}
+
+.about-left p {
+  padding: 10px;
+font-family: 'Poppins';
+font-weight: 400;
+font-size: 18px;
+/* line-height: 100%; */
+letter-spacing: 0%;
+line-height: 1.4;
+padding-bottom: 60px;
+color:#272A2F;
 
 }
-@media (max-width: 768px) {
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+
+/* Style de la colonne droite */
+.about-right {
+  width: 55%; /* Augmenté pour avoir plus d'espace */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-image {
+  height: 60%;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%; /* Assure que l'image occupe toute la largeur */
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.stats-container {
+  height: 40%;
+  background-color: #F8F9FA;
+  border-radius: 25px;
+  padding: 30px;
+  width: 100%;  /* pour occuper  toute la largeur  */
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
+  height: 100%;
+}
+
+.stat-item {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+  font-size: 48px;
+  font-weight: 500;
+  color: #252323;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 1200px) {
+  .about-content {
+    max-width: 100%;
+    padding: 0 20px;
   }
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-left, .about-right {
+    width: 100%;
+  }
+  
+  .about-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-left {
+    padding: 20px;
+  }
+  
+  .about-left h1 {
+    font-size: 24px;
+  }
+  
+  .about-left p {
+    font-size: 16px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .stat-value {
+    font-size: 36px;
+  }
+}
