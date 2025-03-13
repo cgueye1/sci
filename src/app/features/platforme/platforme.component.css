@@ -11,25 +11,6 @@
   .star-rating .star {
     display: inline-block;
   }
-/* .titre-plateforme {
-    padding-top: 50px;
-    font-weight: 600px;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0px;
-    text-align: center;
-    color:#252323;
-    }
-.subtitle {
-    padding-top: 15px;
-    font-family: Instrument Sans;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 100%;
-    letter-spacing: 0px;
-    text-align: center;
-
-} */
   /* Amélioration de l'accessibilité pour le focus */
   button:focus, a:focus {
     outline: 2px solid #3b82f6;
@@ -63,7 +44,7 @@ color:#272A2F;
   height: 16rem; /* Correspond à h-64 */
   /* transition: transform 0.3s ease; */
   width: 100%;
-  margin-left: -130px;
+  margin-left: -160px;
   
 }
 
@@ -91,33 +72,12 @@ color:#272A2F;
   background-color: #3a3535;
 }
 .card-plateforme {
-    width: 284px;
+    width: 370px;
     height: 372px;
     gap: 10px;
     /* top: 309px; */
     /* left: 947px; */
     border-radius: 10px;
-    
-  
 
 }
-/* .card-one{
-    background-color:#FBFBFB;
-    
-} */
-/* .btn-button {
-    background-color:#252323;
-    color: #FBFBFB;
-    width: 116px;
-    height:45px;
-    top: 243px;
-    left: 88px;
-    border-radius: 10px;
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
 
-
-} */

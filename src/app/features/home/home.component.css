@@ -42,11 +42,13 @@ main > div {
 }
 .card-container {
   margin-left: 190px;
+  
+  
 }
 .card-boucle{
   width: 211px;
   height: 200px;
-  padding: auto;
+  padding: 0;
 }
 
 /* Transition fluide lors du changement de position */
