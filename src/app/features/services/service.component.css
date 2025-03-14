@@ -1,17 +1,8 @@
 /* Main section styles */
 .services-section {
-  border-radius: 25px;
-  margin-left: 100px;
-  margin-right: 100px;
   background-color:#F6F8F7;
-  /* width: 95%; */
-  /* padding: 20px; */
-  margin-bottom: 40px;
-  font-family: 'Poppins';
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+ 
+} 
 .titre {
   font-family: 'Poppins';
   margin-bottom: 5px;
@@ -34,27 +25,6 @@
 
 }
 
-  /* Team image container */
-  .team-image-container {
-height: 100%;
-margin-left: 30px;
-min-height: 700px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-width: 500px;
-height: 716px;
-top: 295px;
-left: 40px;
-border-radius: 20px;
-
-  }
-  .right-column-service {
-    margin:0 ;
-    padding: 0;
-    margin-left: -190px; /* Ajustez cette valeur selon vos besoins */
-    /* background-color: blue; */
-    
-    
-  }
   
   /* Icon container styles */
   .icon-container {
@@ -111,19 +81,4 @@ border-radius: 20px;
 
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .team-image-container {
-      min-height: 400px;
-    }
-    
-    .service-title {
-      font-size: 1.1rem;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .team-image-container {
-      min-height: 350px;
-    }
-  }
+ 

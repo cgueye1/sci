@@ -1,21 +1,14 @@
-
-/* Modification pour supprimer l'espacement à gauche */
+/* Styles de base */
 main {
-  padding-left: 100px; /* Supprime le padding gauche */
-  margin-left: 100px; /* Supprime la marge gauche */
+  padding-left: 100px;
+  margin-left: 100px;
 }
 
-/* Ajustement pour la première div dans le main */
 main > div {
-  padding-left: 70; /* Supprime le padding gauche */
-  margin-left: 70; /* Supprime la marge gauche */
+  padding-left: 70;
+  margin-left: 70;
 }
 
-/* Pour s'assurer que le contenu texte s'aligne complètement à gauche */
-/* .flex.flex-col.justify-center.order-2.lg\:order-1 {
-  padding-left: 0;
-  margin-left: 0;
-} */
 /* Position initiale des cartes */
 .top-left {
   top: 54px;
@@ -35,73 +28,49 @@ main > div {
 
 .bottom-right {
   bottom: 0;
-  right: 0;  
+  right: 0;
   top: 227.58px;
   left: 231.44px;
-
 }
+
 .card-container {
   margin-left: 190px;
-  
-  
 }
-.card-boucle{
+
+.card-boucle {
   width: 211px;
   height: 200px;
   padding: 0;
 }
 
-/* Transition fluide lors du changement de position */
-/* .carte-principale div {
-  transition: transform 0.7s ease-in-out, top 0.7s ease-in-out, left 0.7s ease-in-out;
-} */
 .img-card {
-width: 77px;
-height: 77px;
-top: 37px;
-left: 52px;
+  width: 77px;
+  height: 77px;
+  top: 37px;
+  left: 52px;
 }
 
 .titre-left {
-width: 100%;
-height: 144px;
-top: 213px;
-left: 81px;
-padding-top: 10px;
-background-color: red;
-
-
+  width: 100%;
+  height: 144px;
+  top: 213px;
+  left: 81px;
+  padding-top: 10px;
+  background-color: red;
 }
 
-
-/* Gradient animé */
-/* .soustitre {
-  font-family: Poppins;
-font-weight: 700;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF );
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-}
-  */
- 
 .soustitre {
-/* font-family: Poppins; */
-/* font-weight: 900; */
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF );
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
- display: inline-block;
-position: relative;
-transition: transform 0.5s, opacity 0.5s;
-margin: 0;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.5s, opacity 0.5s;
+  margin: 0;
 }
 
 .word-exit {
@@ -123,138 +92,289 @@ margin: 0;
     opacity: 1;
   }
 }
+
 .para-soustitre {
   width: 488px;
   height: 144px;
-  
-/* font-weight: 700; */
-/* margin-top: 90px; */
-/* padding: 10px; */
-font-size: 48px;
-/* line-height: 100%; */
-/* letter-spacing: 0%; */
-color:#000000;
-
-
+  font-size: 48px;
+  color: #000000;
 }
 
-/* Animation fade-up
-.fade-up {
-  animation: fadeUp 0.8s ease-in-out;
+.mon-para {
+  top: 400px;
+  left: 81px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
 }
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-.mon-para{
-/* width: 498px;
-height: 189px; */
-top: 400px;
-left: 81px;
-/* font-family: Poppins; */
-font-weight: 400;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #000000;
-
-
-
-} 
-
-
-/* .soustitre {
-width: 488px;
-height: 144px;
-top: 213px;
-left: 81px;
-font-family: Poppins;
-font-weight: 700;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-background: linear-gradient(121.11deg, #574D48 42.03%, #FFFFFF 78.8%);
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-
-} */
-.mybutton{
-width:170px;
-background-color:#252323;
-color: white;
-margin-top: -40px;
-height: 45px;
-top: 594px;
-left: 81px;
-border-radius: 15px;
-border-width: 1px;
-font-weight: 500;
-font-size: 20px;
-line-height: 30px;
-letter-spacing: 0%;
+.mybutton {
+  width: 170px;
+  background-color: #252323;
+  color: white;
+  /* margin-top: -40px; */
+  height: 45px;
+  /* top: 594px; */
+  /* left: 81px; */
+  border-radius: 15px;
+  border-width: 1px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
 }
 
 .card-prestataires {
   top: 195px;
   left: 198px;
   text-decoration: white;
-  background-color:#252323;
+  background-color: #252323;
 }
-.prestataire-img {
-width: 77px;
-height: 77px;
-top: 34px;
-left: 52px;
 
+.prestataire-img {
+  width: 77px;
+  height: 77px;
+  top: 34px;
+  left: 52px;
 }
 
 .card-copropriete {
   right: 0;
   left: 198px;
+}
 
-} 
-.copropriété-img{
-width: 77px;
-height: 77px;
-top: 37px;
-left: 52px;
-
+.copropriété-img {
+  width: 77px;
+  height: 77px;
+  top: 37px;
+  left: 52px;
 }
 
 .card-vefa {
   top: 235px;
   border-radius: 20px;
-
 }
-.vefa-img {
-width: 77px;
-height: 77px;
-top: 34px;
-left: 52px;
 
+.vefa-img {
+  width: 77px;
+  height: 77px;
+  top: 34px;
+  left: 52px;
 }
 
 .card-location {
   top: 47px;
   border-radius: 20px;
 }
-.location-img {
-width: 77px;
-height: 77px;
-top: 20px;
-left: 52px;
 
+.location-img {
+  width: 77px;
+  height: 77px;
+  top: 20px;
+  left: 52px;
 }
 
 .bg-card-black {
-  background-color:#252323;
+  background-color: #252323;
+}
 
+/* Media queries pour rendre les cartes responsives */
+@media (max-width: 1199px) {
+  main {
+    padding-left: 50px;
+    margin-left: 50px;
+  }
+  
+  .card-container {
+    margin-left: 120px;
+  }
+  
+  .top-left {
+    top: 40px;
+    left: 0;
+  }
+  
+  .top-right {
+    left: 190px;
+  }
+  
+  .bottom-left {
+    top: 230px;
+  }
+  
+  .bottom-right {
+    top: 190px;
+    left: 190px;
+  }
+}
+
+@media (max-width: 991px) {
+  main {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+  
+  .card-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .para-soustitre {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-boucle {
+    width: 180px;
+    height: 170px;
+  }
+  
+  .top-left {
+    top: 30px;
+    left: 0;
+  }
+  
+  .top-right {
+    left: 190px;
+  }
+  
+  .bottom-left {
+    top: 210px;
+  }
+  
+  .bottom-right {
+    top: 210px;
+    left: 190px;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .card-container {
+    height: 400px !important;
+  }
+  
+  .card-boucle {
+    width: 150px;
+    height: 140px;
+  }
+  
+  .img-card {
+    width: 60px;
+    height: 60px;
+    top: 25px;
+    left: 45px;
+  }
+  
+  .top-left {
+    top: 20px;
+    left: 0;
+  }
+  
+  .top-right {
+    left: 160px;
+  }
+  
+  .bottom-left {
+    top: 170px;
+  }
+  
+  .bottom-right {
+    top: 170px;
+    left: 160px;
+  }
+}
+
+@media (max-width: 575px) {
+  main {
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+  
+  .soustitre, .para-soustitre {
+    font-size: 36px;
+  }
+  
+  .card-container {
+    height: 340px !important;
+  }
+  
+  .card-boucle {
+    width: 130px;
+    height: 120px;
+    font-size: 14px;
+  }
+  
+  .img-card {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 40px;
+  }
+  
+  .top-left {
+    top: 20px;
+    left: 0;
+  }
+  
+  .top-right {
+    left: 140px;
+  }
+  
+  .bottom-left {
+    top: 150px;
+  }
+  
+  .bottom-right {
+    top: 150px;
+    left: 140px;
+  }
+  
+  .mybutton {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 380px) {
+  .card-boucle {
+    width: 110px;
+    height: 110px;
+    font-size: 12px;
+  }
+  
+  .img-card {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 35px;
+  }
+  
+  .top-right {
+    left: 120px;
+  }
+  
+  .bottom-left {
+    top: 130px;
+  }
+  
+  .bottom-right {
+    top: 130px;
+    left: 120px;
+  }
+  
+  .soustitre, .para-soustitre {
+    font-size: 30px;
+  }
 }

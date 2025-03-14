@@ -1,23 +1,23 @@
 /* Fond de la section sur toute la largeur */
 .container-faq {
     background-color: #F7F9F8;
-    width: 100vw; /* Prend toute la largeur de l'écran */
-    margin: 0;
+    /* width: 100vw; /* Prend toute la largeur de l'écran */
+    /* margin: 0; */ 
   }
   
   /* Décalage du texte FAQ vers la gauche */
-  .faq-section {
+  /* .faq-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 140px;
-  }
-  
+    /* margin-left: 140px; */
+  /* } */
+   /*  */
   /* Apparence des accordéons */
   .faq-accordion div {
     border: none;
     background-color: #fff;
     border-radius: 15px;
-    margin-left: -90px;
+    /* margin-left: -90px; */
   }
   

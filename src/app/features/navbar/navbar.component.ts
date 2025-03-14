@@ -28,12 +28,23 @@ export class NavbarComponent implements OnInit {
   isMobileMenuOpen = false;
   
   navLinks = [
-    { path: '/accueil', label: 'Accueil' },
-    { path: '/a-propos', label: 'À propos' },
-    { path: '/services', label: 'Nos services' }
+    { id: 'home', label: 'Accueil' },
+    { id: 'about', label: 'À propos' },
+    { id: 'services', label: 'Nos services' },
+    // { id: 'platforme', label: 'Nos plateformes' },
+    // { id: 'contact', label: 'Nous Contacter' }
   ];
+  
 
   constructor() {}
+  navigateToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.closeMobileMenu(); // Ferme le menu mobile après navigation
+    }
+  }
+  
 
   ngOnInit(): void {}
 

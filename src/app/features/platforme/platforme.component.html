@@ -1,16 +1,16 @@
-<section class="section-plateforme-container ">
+<section class="section-plateforme-container">
   <!-- Titre et description -->
-  <div class="text-center mb-12 ">
+  <div class="text-center mb-12">
     <h1 class="text-4xl mb-4 plateforme-title">{{ pageTitle }}</h1>
-    <p class="plateforme-description" > {{ pageDescription}}</p>
+    <p class="plateforme-description mx-auto">{{ pageDescription }}</p>
   </div>
 
   <!-- Section évaluation et téléchargement -->
   <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
     <!-- Évaluation utilisateurs -->
     <div class="flex items-center space-x-2">
-      <div class="flex items-center space-x-0.5 ">
-        <div class="w-10 h-10 rounded-full overflow-hidden ">
+      <div class="flex items-center space-x-0.5">
+        <div class="w-10 h-10 rounded-full overflow-hidden">
           <img src="assets/images/mem1.png" alt="Avatar utilisateur" class="w-full h-full object-cover">
         </div>
         <div class="w-10 h-10 rounded-full overflow-hidden -ml-4">
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div>
-        <div class="flex items-center ">
+        <div class="flex items-center">
           <span class="">★</span>
           <span class="">★</span>
           <span class="">★</span>
@@ -29,12 +29,12 @@
           <span class="to-white">★</span>
           <span class="ml-1">{{ userRating }}+</span>
         </div>
-        <p class="text-sm ">From {{ userCount }} Users</p>
+        <p class="text-sm">From {{ userCount }} Users</p>
       </div>
     </div>
 
     <!-- Séparateur vertical sur desktop -->
-    <div class="hidden md:block h-12 w-px "></div>
+    <div class="hidden md:block h-12 w-px"></div>
 
     <!-- Liens de téléchargement -->
     <div class="flex items-center gap-4">
@@ -48,25 +48,12 @@
     </div>
   </div>
 
-  <!-- Grille de services immobiliers -->
-  <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 card-services" >
-    <div *ngFor="let service of realEstateServices" class=" relative group overflow-hidden rounded-[10px] cursor-pointer card-plateforme h-64">
-      <div class="h-64 overflow-hidden">
-        <img 
-          [src]="service.imageUrl" 
-          [alt]="service.altText" 
-          class="w-full h-full object-cover img-card"
-          loading="lazy">
-      </div>
-    </div>
-  </div> -->
-
-  <div class="py-16">
-    <div class="max-w-6xl mx-auto text-center px-4">
+  <div class="py-8 md:py-16">
+    <div class="max-w-6xl mx-auto text-center px-2 sm:px-4">
       @defer (on viewport) {
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-96">
           @for (service of realEstateServices; track service.title) {
-            <div class="relative group overflow-hidden rounded-[10px] cursor-pointer card-plateforme h-64">
+            <div class="group overflow-hidden rounded-[10px] cursor-pointer card-plateforme ">
               <!-- Image de la carte -->
               <img 
                 [src]="service.image"
@@ -90,7 +77,7 @@
         </div>
       } @placeholder {
         <div class="flex items-center justify-center h-64">
-          <div class="animate-pulse space-y-4 " >
+          <div class="animate-pulse space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               @for (i of [1,2,3,4]; track i) {
                 <div class="rounded-lg bg-gray-200 h-64 w-full"></div>
