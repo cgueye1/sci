@@ -38,14 +38,28 @@ button:focus, a:focus {
 .card-plateforme {
   position: relative;
   height: 372px;
-  width: 370px;
-  margin-left: -160px;
+  width: 100%; /* Changed from fixed width */
   border-radius: 10px;
+  margin-left: 0; /* Removed negative margin */
   gap: 10px;
+}
+.icone-card {
+  width: 170px;
+height: 40;
+top: 166px;
+left: 124px;
+border-radius: 5px;
+border-width: 2px;
+padding-top: 5px;
+padding-bottom: 5px;
+gap: 10px;
+
 }
 
 .card-plateforme:hover {
   transform: scale(1.02);
+  background: #FBFBFB;
+
 }
 
 .card-one {
@@ -65,39 +79,49 @@ button:focus, a:focus {
 .btn-button:hover {
   background-color: #3a3535;
 }
+ .btn-card {
+  width: 170px;
+height: 40px;
+top: 166px;
+left: 123px;
+border-radius: 5px;
+border-width: 2px;
+padding-top: 5px;
+padding-right: 0px;
+padding-bottom: 5px;
+padding-left: 59px;
+/* gap: 10px; */
+border:2px solid #D1B8A7;
+color: white;
+background-color: #574D48B2;
 
+
+ }
+ .btn-card:hidden {
+  display: none;
+  
+ }
+.btn-card h3 {
+ margin-left:-70px;
+}
 /* Media Queries pour le responsive */
 @media (max-width: 1536px) {
   .card-plateforme {
-    width: 330px;
     height: 350px;
-    margin-left: -120px;
   }
 }
 
 @media (max-width: 1280px) {
   .card-plateforme {
-    width: 300px;
     height: 320px;
-    margin-left: -100px;
-  }
-  
-  .gap-96 {
-    gap: 4rem !important;
   }
 }
 
 @media (max-width: 1024px) {
   .card-plateforme {
-    width: 280px;
     height: 300px;
-    margin-left: -40px;
   }
-  
-  .gap-96 {
-    gap: 2rem !important;
-  }
-  
+
   .plateforme-description {
     font-size: 16px;
     max-width: 90%;
@@ -109,26 +133,26 @@ button:focus, a:focus {
   .section-plateforme-container {
     padding: 30px 20px;
   }
-  
+
   .card-plateforme {
     width: 100%;
     height: 320px;
     margin-left: 0;
   }
-  
+
   .gap-96 {
     gap: 1.5rem !important;
   }
-  
+
   .plateforme-title {
     font-size: 30px;
   }
-  
+
   .plateforme-description {
     font-size: 16px;
     max-width: 100%;
   }
-  
+
   .grid-cols-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
@@ -138,25 +162,25 @@ button:focus, a:focus {
   .section-plateforme-container {
     padding: 20px 15px;
   }
-  
+
   .card-plateforme {
     width: 100%;
     height: 280px;
   }
-  
+
   .grid-cols-2 {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
   }
-  
+
   .plateforme-title {
     font-size: 26px;
   }
-  
+
   .plateforme-description {
     font-size: 15px;
     line-height: 1.5;
   }
-  
+
   .gap-96 {
     gap: 1rem !important;
   }
@@ -166,24 +190,24 @@ button:focus, a:focus {
   .card-plateforme {
     height: 250px;
   }
-  
+
   .plateforme-title {
     font-size: 24px;
   }
-  
+
   .plateforme-description {
     font-size: 14px;
   }
-  
+
   /* Ajuster la taille du texte dans les cartes */
   .card-one h3 {
     font-size: 16px;
   }
-  
+
   .card-one p {
     font-size: 13px;
   }
-  
+
   .card-one button {
     font-size: 14px;
     padding: 6px 16px;
@@ -194,7 +218,7 @@ button:focus, a:focus {
   .section-plateforme-container {
     padding: 15px 10px;
   }
-  
+
   .card-plateforme {
     height: 220px;
   }

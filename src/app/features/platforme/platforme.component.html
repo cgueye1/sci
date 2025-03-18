@@ -1,14 +1,14 @@
 <section class="section-plateforme-container">
   <!-- Titre et description -->
-  <div class="text-center mb-12">
-    <h1 class="text-4xl mb-4 plateforme-title">{{ pageTitle }}</h1>
-    <p class="plateforme-description mx-auto">{{ pageDescription }}</p>
+  <div class="text-center mb-8 md:mb-12">
+    <h1 class="text-3xl md:text-4xl mb-4 plateforme-title">{{ pageTitle }}</h1>
+    <p class="plateforme-description mx-auto px-4">{{ pageDescription }}</p>
   </div>
 
   <!-- Section évaluation et téléchargement -->
-  <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-8 md:mb-16 px-4">
     <!-- Évaluation utilisateurs -->
-    <div class="flex items-center space-x-2">
+    <div class="flex items-center space-x-2 mb-4 md:mb-0">
       <div class="flex items-center space-x-0.5">
         <div class="w-10 h-10 rounded-full overflow-hidden">
           <img src="assets/images/mem1.png" alt="Avatar utilisateur" class="w-full h-full object-cover">
@@ -34,34 +34,36 @@
     </div>
 
     <!-- Séparateur vertical sur desktop -->
-    <div class="hidden md:block h-12 w-px"></div>
+    <div class="hidden md:block h-12 w-px bg-gray-200"></div>
 
     <!-- Liens de téléchargement -->
-    <div class="flex items-center gap-4">
-      <button 
-        *ngFor="let app of mobileApps" 
+    <div class="flex items-center gap-4 flex-wrap justify-center">
+      <button
+        *ngFor="let app of mobileApps"
         (click)="downloadApp(app.url)"
         class="transition-transform hover:scale-105"
         [attr.aria-label]="'Télécharger sur ' + app.platform">
-        <img [src]="app.image" [alt]="'Badge ' + app.platform" class="h-10">
+        <img [src]="app.image" [alt]="'Badge ' + app.platform" class="h-8 md:h-10">
       </button>
     </div>
   </div>
 
-  <div class="py-8 md:py-16">
-    <div class="max-w-6xl mx-auto text-center px-2 sm:px-4">
+  <div class="py-6 md:py-16">
+    <div class="max-w-7xl mx-auto text-center px-4">
       @defer (on viewport) {
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-96">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           @for (service of realEstateServices; track service.title) {
-            <div class="group overflow-hidden rounded-[10px] cursor-pointer card-plateforme ">
+            <div class="group overflow-hidden  rounded-[10px] cursor-pointer card-plateforme ">
+            
+             
               <!-- Image de la carte -->
-              <img 
+              <img
                 [src]="service.image"
                 [alt]="service.title"
                 class="w-full h-full object-cover img-card"
                 loading="lazy">
               <!-- Div de superposition pour le texte au hover -->
-              <div class="absolute inset-0 bg-white bg-opacity-5 flex flex-col justify-center items-center p-4 group-hover:bg-opacity-90 transition duration-300 card-one">
+              <div class="absolute inset-0 bg-[#FBFBFB] bg-opacity-5 flex flex-col justify-center items-center p-4 group-hover:bg-opacity-100 transition duration-300 card-one " >
                 <h3 class="text-black text-lg font-semibold mb-2 opacity-0 group-hover:opacity-100 transition duration-300">
                   {{ service.title }}
                 </h3>
@@ -71,14 +73,22 @@
                 <button class="mt-4 px-4 py-2 text-white rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 font-bold btn-button">
                   Visitez
                 </button>
+                <div (click)="toggleVisibility()" class="card">
+                  <div *ngIf="isVisible" class="btn-card ml-32 p-0 mb-32 group-hover:opacity-0">
+                    <h3 class="text-xl font-semibold text-center">
+                      {{ service.libeller | uppercase }}
+                    </h3>
+                  </div>
+                </div>
+                
               </div>
             </div>
           }
         </div>
       } @placeholder {
         <div class="flex items-center justify-center h-64">
-          <div class="animate-pulse space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="animate-pulse space-y-4 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
               @for (i of [1,2,3,4]; track i) {
                 <div class="rounded-lg bg-gray-200 h-64 w-full"></div>
               }

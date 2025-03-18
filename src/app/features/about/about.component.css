@@ -1,30 +1,32 @@
 /* Styles de base pour le conteneur principal */
-.about-container {
+/* .about-container {
+
   width: 100%;
-  padding: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: -1.2rem;
   font-family: 'Poppins', sans-serif;
-}
+} */
 
 /* Styles pour le contenu principal */
-.about-content {
+/* .about-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   max-width: 1700px;
   margin: 0 auto;
   overflow: hidden;
-}
+} */
 
 /* Styles pour la colonne de gauche */
 .about-left {
-  width: 100%;
-  padding: 2rem 1.5rem;
+  /* width: 100%; */
+  /* padding: 4rem ; */
+
+
   background-color: #F6F8F7;
   border-radius: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: flex-start; */
 }
 
 .about-left h3 {
@@ -68,6 +70,7 @@
   border-radius: 1.25rem;
   overflow: hidden;
   aspect-ratio: 16/9;
+  margin-bottom: 0.5rem;
 }
 
 .about-image img {
@@ -78,9 +81,9 @@
 }
 
 .stats-container {
-  background-color: #F8F9FA;
+  background-color:#F7F8F7;
   border-radius: 1.25rem;
-  padding: 1.5rem;
+  /* padding: 0.5rem; */
   width: 100%;
 }
 
@@ -89,9 +92,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   height: 100%;
+  margin-bottom: 1.5em; ;
 }
 
 .stat-item {
+
   background-color: #FFFFFF;
   border-radius: 0.625rem;
   display: flex;
@@ -117,15 +122,15 @@
 }
 
 /* Media queries pour les tablettes et desktop */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .about-container {
     padding: 2rem;
   }
-  
+
   .stats-grid {
     gap: 1.25rem;
   }
-  
+
   .stat-item {
     padding: 1.25rem 1rem;
   }
@@ -135,31 +140,31 @@
   .about-container {
     padding: 3rem 6rem;
   }
-  
+
   .about-content {
     flex-direction: row;
     gap: 2rem;
   }
-  
+
   .about-left {
     width: 45%;
     padding: 3rem 2.5rem;
   }
-  
+
   .about-right {
     width: 55%;
   }
-  
+
   .about-image {
     height: 60%;
     aspect-ratio: auto;
   }
-  
+
   .stats-container {
     height: 40%;
     padding: 1.875rem;
   }
-  
+
   .stats-grid {
     gap: 1.5rem;
   }
@@ -169,36 +174,129 @@
   .about-left {
     padding: 3.125rem 2.5rem;
   }
-  
+
   .about-left h1 {
     margin-bottom: 2.5rem;
   }
-  
+
   .about-left p {
     margin-top: 0;
   }
-  
+
   .stats-container {
     padding: 2.5rem;
   }
 }
 
-/* Adaptation pour les appareils très petits */
+Adaptation pour les appareils très petits
 @media (max-width: 480px) {
   .about-container {
     padding: 1rem 0.75rem;
   }
-  
+
   .about-left {
     padding: 1.5rem 1rem;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
-  
+
   .stat-item {
     padding: 0.875rem 0.625rem;
+  }
+} */
+.about-left {
+  background-color: #F6F8F7;
+  border-radius: 1.25rem;
+}
+
+.about-paragraphs p {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #272A2F;
+}
+
+.about-image {
+  aspect-ratio: 16/9;
+}
+
+.stats-container {
+  background-color: #F7F8F7;
+  border-radius: 1.25rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.stat-item {
+  background-color: #FFFFFF;
+  border-radius: 0.625rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 500;
+  color: #252323;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .stat-item {
+    padding: 1rem 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-image {
+    aspect-ratio: 4/3;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stat-item {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-image {
+    height: 400px;
+  }
+
+  .stats-grid {
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 }

@@ -7,6 +7,7 @@ import { NgOptimizedImage } from '@angular/common';
  */
 interface plateformesService {
   id: number;
+  libeller:string;
   title: string;
   description: string;
   image: string;
@@ -44,6 +45,12 @@ export class PlatformeComponent {
    * Titre principal du composant
    */
   pageTitle: string = 'Visitez nos différentes plateformes';
+
+  isVisible = true;
+
+toggleVisibility() {
+  this.isVisible = !this.isVisible;
+}
   
   /**
    * Description détaillée des services offerts
@@ -81,6 +88,7 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
   realEstateServices: plateformesService[] = [
     {
       id: 1,
+      libeller:'VEFA', 
       title: 'Achat en VEFA',
       description: 'Achetez des biens immobiliers sur plan avec nos services dédiés',
       image: 'assets/images/vefa.jpeg',
@@ -89,6 +97,7 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
     },
     {
       id: 2,
+      libeller:'LOCATION', 
       title: 'Location',
       description: 'Trouvez votre location idéale parmi notre sélection de biens',
       image: 'assets/images/room.jpg',
@@ -97,6 +106,7 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
     },
     {
       id: 3,
+      libeller:'SERVICE', 
       title: 'Platefome de VEFA ',
       description: 'Services professionnels de réparation et maintenance pour votre bien',
        image: 'assets/images/menuisier.jpg',
@@ -105,6 +115,7 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
     },
     {
       id: 4,
+      libeller:'Copropriété', 
       title: 'Copropriété',
       description: 'Solutions de gestion pour les copropriétés et résidences',
      image: 'assets/images/IMMO.jpeg',

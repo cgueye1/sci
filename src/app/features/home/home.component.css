@@ -1,15 +1,19 @@
-/* Styles de base */
-main {
-  padding-left: 100px;
-  margin-left: 100px;
+/* Base styles */
+.card-boucle {
+  width: 211px;
+  height: 200px;
+  padding: 1rem;
+  background-color: #252323;
+  border-radius: 20px;
 }
 
-main > div {
-  padding-left: 70;
-  margin-left: 70;
+.img-card {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
 }
 
-/* Position initiale des cartes */
+/* Card positions - positions fixes */
 .top-left {
   top: 54px;
   left: 0;
@@ -21,7 +25,7 @@ main > div {
 }
 
 .bottom-left {
-  top: 274px;
+  top: 270px;
   bottom: 0;
   left: 0;
 }
@@ -29,40 +33,20 @@ main > div {
 .bottom-right {
   bottom: 0;
   right: 0;
-  top: 227.58px;
+  top: 216.58px;
   left: 231.44px;
 }
 
-.card-container {
-  margin-left: 190px;
+/* Animation pour le contenu des cartes */
+.animated-content .mb-4,
+.animated-content span {
+  transition: all 0.5s ease;
 }
 
-.card-boucle {
-  width: 211px;
-  height: 200px;
-  padding: 0;
-}
-
-.img-card {
-  width: 77px;
-  height: 77px;
-  top: 37px;
-  left: 52px;
-}
-
-.titre-left {
-  width: 100%;
-  height: 144px;
-  top: 213px;
-  left: 81px;
-  padding-top: 10px;
-  background-color: red;
-}
-
+/* Animation pour les mots */
 .soustitre {
   font-size: 48px;
   line-height: 100%;
-  letter-spacing: 0%;
   background: linear-gradient(121.11deg, #574D48 44%, #FFFFFF);
   -webkit-background-clip: text;
   background-clip: text;
@@ -73,40 +57,53 @@ main > div {
   margin: 0;
 }
 
+/* Animations pour les mots */
 .word-exit {
-  transform: translateY(20px);
   opacity: 0;
+  transform: translateY(20px);
 }
 
 .word-enter {
-  animation: slideDown 0.5s forwards;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.6s ease;
 }
 
-@keyframes slideDown {
+@keyframes fadeIn {
   from {
-    transform: translateY(-20px);
     opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.para-soustitre {
-  width: 488px;
-  height: 144px;
-  font-size: 48px;
-  color: #000000;
+/* Animations pour le contenu des cartes */
+.animated-content {
+  overflow: hidden;
 }
 
-.mon-para {
-  top: 400px;
-  left: 81px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
+.animated-content .mb-4 img,
+.animated-content span {
+  animation: fadeInContent 0.5s ease-in-out;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.para-soustitre2 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
   color: #000000;
 }
 
@@ -114,267 +111,83 @@ main > div {
   width: 170px;
   background-color: #252323;
   color: white;
-  /* margin-top: -40px; */
   height: 45px;
-  /* top: 594px; */
-  /* left: 81px; */
   border-radius: 15px;
-  border-width: 1px;
+  border: 1px solid transparent;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 0%;
-}
-
-.card-prestataires {
-  top: 195px;
-  left: 198px;
-  text-decoration: white;
-  background-color: #252323;
-}
-
-.prestataire-img {
-  width: 77px;
-  height: 77px;
-  top: 34px;
-  left: 52px;
-}
-
-.card-copropriete {
-  right: 0;
-  left: 198px;
-}
-
-.copropriété-img {
-  width: 77px;
-  height: 77px;
-  top: 37px;
-  left: 52px;
-}
-
-.card-vefa {
-  top: 235px;
-  border-radius: 20px;
-}
-
-.vefa-img {
-  width: 77px;
-  height: 77px;
-  top: 34px;
-  left: 52px;
-}
-
-.card-location {
-  top: 47px;
-  border-radius: 20px;
-}
-
-.location-img {
-  width: 77px;
-  height: 77px;
-  top: 20px;
-  left: 52px;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
 }
 
 .bg-card-black {
   background-color: #252323;
 }
 
-/* Media queries pour rendre les cartes responsives */
-@media (max-width: 1199px) {
-  main {
-    padding-left: 50px;
-    margin-left: 50px;
-  }
-  
-  .card-container {
-    margin-left: 120px;
-  }
-  
-  .top-left {
-    top: 40px;
-    left: 0;
-  }
-  
-  .top-right {
-    left: 190px;
-  }
-  
-  .bottom-left {
-    top: 230px;
-  }
-  
-  .bottom-right {
-    top: 190px;
-    left: 190px;
-  }
-}
-
-@media (max-width: 991px) {
-  main {
-    padding-left: 20px;
-    margin-left: 20px;
-  }
-  
-  .card-container {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    max-width: 450px;
-  }
-  
-  .para-soustitre {
-    width: 100%;
-    height: auto;
-  }
-  
+/* Responsive breakpoints */
+@media (max-width: 1280px) {
   .card-boucle {
     width: 180px;
-    height: 170px;
-  }
-  
-  .top-left {
-    top: 30px;
-    left: 0;
-  }
-  
-  .top-right {
-    left: 190px;
-  }
-  
-  .bottom-left {
-    top: 210px;
-  }
-  
-  .bottom-right {
-    top: 210px;
-    left: 190px;
+    height: 180px;
   }
 }
 
-@media (max-width: 767px) {
-  main {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 10px;
-  }
-  
-  .card-container {
-    height: 400px !important;
-  }
-  
+@media (max-width: 1024px) {
   .card-boucle {
-    width: 150px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
   }
-  
+
   .img-card {
     width: 60px;
     height: 60px;
-    top: 25px;
-    left: 45px;
-  }
-  
-  .top-left {
-    top: 20px;
-    left: 0;
-  }
-  
-  .top-right {
-    left: 160px;
-  }
-  
-  .bottom-left {
-    top: 170px;
-  }
-  
-  .bottom-right {
-    top: 170px;
-    left: 160px;
   }
 }
 
-@media (max-width: 575px) {
-  main {
-    padding-left: 5px;
-    margin-left: 5px;
-  }
-  
-  .soustitre, .para-soustitre {
-    font-size: 36px;
-  }
-  
+@media (max-width: 768px) {
   .card-container {
-    height: 340px !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    height: auto !important;
   }
-  
+
   .card-boucle {
-    width: 130px;
-    height: 120px;
-    font-size: 14px;
+    position: relative !important;
+    width: 180px !important;
+    height: 170px !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
   }
-  
+
   .img-card {
     width: 50px;
     height: 50px;
-    top: 20px;
-    left: 40px;
-  }
-  
-  .top-left {
-    top: 20px;
-    left: 0;
-  }
-  
-  .top-right {
-    left: 140px;
-  }
-  
-  .bottom-left {
-    top: 150px;
-  }
-  
-  .bottom-right {
-    top: 150px;
-    left: 140px;
-  }
-  
-  .mybutton {
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
   }
 }
 
-/* Pour les très petits écrans */
-@media (max-width: 380px) {
+@media (max-width: 640px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
   .card-boucle {
-    width: 110px;
-    height: 110px;
-    font-size: 12px;
+    height: 120px !important;
   }
-  
-  .img-card {
-    width: 40px;
+
+  .soustitre,
+  .para-soustitre {
+    font-size: 2rem;
+  }
+
+  .para-soustitre2 {
+    font-size: 0.875rem;
+  }
+
+  .mybutton {
+    width: 150px;
     height: 40px;
-    top: 15px;
-    left: 35px;
-  }
-  
-  .top-right {
-    left: 120px;
-  }
-  
-  .bottom-left {
-    top: 130px;
-  }
-  
-  .bottom-right {
-    top: 130px;
-    left: 120px;
-  }
-  
-  .soustitre, .para-soustitre {
-    font-size: 30px;
+    font-size: 1rem;
   }
 }
