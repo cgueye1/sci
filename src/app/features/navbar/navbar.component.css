@@ -5,18 +5,18 @@
    .navbar{
     z-index: 1;
   }
-  
+
   /* Logo */
   .logo {
       font-family: 'Inter', sans-serif;
-      margin-right: auto;
+      /*margin-right: auto;*/
       font-weight: 600;
       font-size: 32px;
       line-height: 38.73px;
-    margin-left: -12px;
+      /*letter-spacing: 0%;*/
       color: #252323;
     }
-  
+
     /* .logo-container {
       position: relative;
       z-index: 10;
@@ -28,20 +28,20 @@
       font-weight: 600;
       font-size: 18px;
       line-height: 100%;
-      letter-spacing: 0px;
+      /*letter-spacing: 0px;*/
       color: #252323;
       position: relative;
     }
-  
-  
-  
+
+
+
     .active-link {
       font-weight: 700;
     }
-  
+
     /* Boutons d'action */
     .contact-btn {
-      padding: 15px;
+      padding: 10px;
       font-family: 'Instrument Sans';
       font-weight: 500;
       font-size: 18px;
@@ -49,9 +49,9 @@
       letter-spacing: 0px;
       text-align: center;
       /* transition: all 0.3s ease; */
-  
+
     }
-  
+
     .platform-btn {
       background-color: #252323;
       color: white;
@@ -61,17 +61,14 @@
       line-height: 100%;
       letter-spacing: 0px;
       text-align: center;
-      padding: 14px;
-      margin-left: -80px;
-  
-      /*margin-right: -95px;*/
-  
+      padding: 9px;
+
     }
-  
+
     .platform-btn:hover {
       background-color: #3a3838;
     }
-  
+
     /* ====================================================
        RESPONSIVE: DESKTOP (1024px et plus)
        ==================================================== */
@@ -79,12 +76,12 @@
       .nav-links {
         display: flex;
       }
-  
+
       .action-buttons {
         display: flex;
       }
     }
-  
+
     /* ====================================================
        RESPONSIVE: TABLETTE (768px - 1023px)
        ==================================================== */
@@ -92,11 +89,11 @@
       .logo {
         font-size: 28px;
       }
-  
+
       .titre-nav {
         font-size: 16px;
       }
-  
+
       .contact-btn-tablet {
         font-family: 'Instrument Sans', sans-serif;
         font-weight: 500;
@@ -106,7 +103,7 @@
         text-align: center;
       }
     }
-  
+
     /* ====================================================
        RESPONSIVE: MOBILE (767px et moins)
        ==================================================== */
@@ -115,7 +112,7 @@
         font-size: 24px;
         margin-left: 0;
       }
-  
+
       .mobile-menu {
         background-color: white;
         position: absolute;
@@ -125,18 +122,18 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         z-index: 20;
       }
-  
+
       .mobile-link {
         font-family: 'Instrument Sans', sans-serif;
         font-size: 16px;
         color: #252323;
         transition: background-color 0.2s ease;
       }
-  
+
       .mobile-link:hover {
         background-color: #f3f4f6;
       }
-  
+
       .mobile-contact-btn {
         background-color: white;
         border: 1px solid #252323;
@@ -145,7 +142,7 @@
         font-weight: 500;
         font-size: 14px;
       }
-  
+
       .mobile-platform-btn {
         background-color: #252323;
         color: white;
@@ -154,11 +151,10 @@
         font-size: 14px;
       }
     }
-  
+
     /* Animation pour la hauteur de la navbar lors du scroll */
     nav.scrolled {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
-  

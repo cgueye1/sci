@@ -1,33 +1,33 @@
 /* Main section styles */
 .services-section {
   background-color:#F6F8F7;
- 
-} 
+
+}
 .titre {
   font-family: 'Poppins';
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 36px;
   line-height: 1.6;
-  letter-spacing: 0%;
+  /*letter-spacing: 0%;*/
   color:#252323;
   padding-top: 30px;
     }
 .para-service h1{
   text-align: start;
   margin: 0 auto;
-  padding: 0 auto;
+  /*padding: 0 auto;*/
   font-family: 'Instrument Sans';
   font-weight: 400;
   font-size: 18px;
   line-height: 2.5;
   letter-spacing: 0px;
-  
+
 
 
 }
 
-  
+
   /* Icon container styles */
   .icon-container {
     background-color: #252323;
@@ -39,11 +39,11 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
-    
-    
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+
   }
-  
+
   .icon-container img {
     /* filter: invert(1); */
     color: white;
@@ -53,7 +53,7 @@
     left: 668px;
 
   }
-  
+
   /* Service title styles */
   .service-title {
     font-family: 'Poppins';
@@ -64,8 +64,8 @@
     line-height: 1.3;
     text-align: center;
   }
-  
- 
+
+
   /* Service description styles */
   .service-description {
     font-family: 'Poppins';
@@ -76,11 +76,10 @@
     letter-spacing: 0%;
     /* font-size: 1rem; */
     line-height: 1.6;
-    color: #272A2F; 
-    
-    
-    
+    color: #272A2F;
+
+
+
 
   }
-  
- 
+

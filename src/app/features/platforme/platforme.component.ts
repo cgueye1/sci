@@ -89,8 +89,8 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
     {
       id: 1,
       libeller:'VEFA', 
-      title: 'Achat en VEFA',
-      description: 'Achetez des biens immobiliers sur plan avec nos services dédiés',
+      title: 'Plateforme  de  VEFA',
+      description: 'Découvrez votre futur chez-vous en avant-première ! Trouvez le bien idéal en VEFA en quelques clics. Visitez notre site dès maintenant !',
       image: 'assets/images/vefa.jpeg',
       altText: 'Signature d\'un contrat VEFA avec plan architectural',
       priority:true
@@ -99,7 +99,7 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
       id: 2,
       libeller:'LOCATION', 
       title: 'Location',
-      description: 'Trouvez votre location idéale parmi notre sélection de biens',
+      description: 'Trouvez votre prochain chez-vous en un clic ! Découvrez des appartements et maisons en location qui correspondent à vos envies !',
       image: 'assets/images/room.jpg',
       altText: 'Intérieur d\'un appartement moderne à louer',
       priority:false
@@ -108,8 +108,8 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
       id: 3,
       libeller:'SERVICE', 
       title: 'Platefome de VEFA ',
-      description: 'Services professionnels de réparation et maintenance pour votre bien',
-       image: 'assets/images/menuisier.jpg',
+      description: 'Besoin d’un expert pour votre projet ? Notre plateforme regroupe les meilleurs prestataires, prêts à vous accompagner.',
+      image: 'assets/images/menuisier.jpg',
       altText: 'Travailleur effectuant des réparations de maintenance',
       priority:true
     },
@@ -117,7 +117,7 @@ pageDescription: string = 'Retrouvez tous nos services immobiliers sur nos plate
       id: 4,
       libeller:'Copropriété', 
       title: 'Copropriété',
-      description: 'Solutions de gestion pour les copropriétés et résidences',
+      description: 'Gérez votre immeuble facilement, rapidement et sans prise de tête grâce à notre plateforme en ligne.',
      image: 'assets/images/IMMO.jpeg',
       altText: 'Immeuble résidentiel moderne en copropriété',
       priority:true

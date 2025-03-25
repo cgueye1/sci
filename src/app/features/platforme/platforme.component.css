@@ -6,7 +6,7 @@
   padding: 40px;
 }
 
-/* Style pour les étoiles d'évaluation - fallback si Tailwind n'est pas suffisant */
+/* Style pour les étoiles d'évaluation */
 .star-rating .star {
   display: inline-block;
 }
@@ -37,15 +37,16 @@ button:focus, a:focus {
 
 .card-plateforme {
   position: relative;
-  height: 372px;
+  height: 472px;
   width: 100%; /* Changed from fixed width */
   border-radius: 10px;
   margin-left: 0; /* Removed negative margin */
   gap: 10px;
+
 }
 .icone-card {
   width: 170px;
-height: 40;
+height: 40px;
 top: 166px;
 left: 124px;
 border-radius: 5px;
@@ -99,7 +100,7 @@ background-color: #574D48B2;
  }
  .btn-card:hidden {
   display: none;
-  
+
  }
 .btn-card h3 {
  margin-left:-70px;

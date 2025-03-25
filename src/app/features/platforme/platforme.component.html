@@ -1,4 +1,4 @@
-<section class="section-plateforme-container">
+<section class="section-plateforme-container ">
   <!-- Titre et description -->
   <div class="text-center mb-8 md:mb-12">
     <h1 class="text-3xl md:text-4xl mb-4 plateforme-title">{{ pageTitle }}</h1>
@@ -48,14 +48,14 @@
     </div>
   </div>
 
-  <div class="py-6 md:py-16">
-    <div class="max-w-7xl mx-auto text-center px-4">
+  <div class="mx-2">
+    <div class="max-w-7xl mx-auto text-center px-2 container " >
       @defer (on viewport) {
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 " >
           @for (service of realEstateServices; track service.title) {
             <div class="group overflow-hidden  rounded-[10px] cursor-pointer card-plateforme ">
-            
-             
+
+
               <!-- Image de la carte -->
               <img
                 [src]="service.image"
@@ -64,7 +64,7 @@
                 loading="lazy">
               <!-- Div de superposition pour le texte au hover -->
               <div class="absolute inset-0 bg-[#FBFBFB] bg-opacity-5 flex flex-col justify-center items-center p-4 group-hover:bg-opacity-100 transition duration-300 card-one " >
-                <h3 class="text-black text-lg font-semibold mb-2 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="text-black text-lg font-semibold mb-16 opacity-0 group-hover:opacity-100 transition duration-300">
                   {{ service.title }}
                 </h3>
                 <p class="text-black text-sm opacity-0 group-hover:opacity-100 transition duration-300 text-center">
@@ -80,7 +80,7 @@
                     </h3>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           }
