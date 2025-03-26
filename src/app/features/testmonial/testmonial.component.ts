@@ -102,7 +102,7 @@ export class TestmonialComponent implements OnInit, OnDestroy {
   startAutoSlide(): void {
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
-    }, 5000);
+    }, 3000);
   }
 
   stopAutoSlide(): void {
